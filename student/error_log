@@ -8,3 +8,29 @@
 [28-Mar-2016 09:48:48 America/Chicago] PHP Parse error:  syntax error, unexpected ':' in /home2/racer161/public_html/coho/student/query.php on line 86
 [28-Mar-2016 09:48:50 America/Chicago] PHP Parse error:  syntax error, unexpected ':' in /home2/racer161/public_html/coho/student/query.php on line 86
 [28-Mar-2016 09:50:26 America/Chicago] PHP Parse error:  syntax error, unexpected ':' in /home2/racer161/public_html/coho/student/query.php on line 86
+[28-Mar-2016 10:44:36 America/Chicago] PHP Parse error:  syntax error, unexpected 'var' (T_VAR) in /home2/racer161/public_html/coho/student/query.php on line 92
+[28-Mar-2016 10:45:10 America/Chicago] PHP Parse error:  syntax error, unexpected 'var' (T_VAR) in /home2/racer161/public_html/coho/student/query.php on line 92
+[28-Mar-2016 10:45:13 America/Chicago] PHP Parse error:  syntax error, unexpected 'var' (T_VAR) in /home2/racer161/public_html/coho/student/query.php on line 92
+[28-Mar-2016 10:46:09 America/Chicago] PHP Parse error:  syntax error, unexpected '++' (T_INC) in /home2/racer161/public_html/coho/student/query.php on line 102
+[28-Mar-2016 10:52:08 America/Chicago] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, object given in /home2/racer161/public_html/coho/student/query.php on line 99
+[28-Mar-2016 10:52:08 America/Chicago] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, object given in /home2/racer161/public_html/coho/student/query.php on line 99
+[28-Mar-2016 10:52:08 America/Chicago] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, object given in /home2/racer161/public_html/coho/student/query.php on line 99
+[28-Mar-2016 10:53:08 America/Chicago] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, array given in /home2/racer161/public_html/coho/student/query.php on line 99
+[28-Mar-2016 10:53:08 America/Chicago] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home2/racer161/public_html/coho/student/query.php on line 99
+[28-Mar-2016 10:53:45 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home2/racer161/public_html/coho/student/query.php on line 99
+[28-Mar-2016 10:55:19 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home2/racer161/public_html/coho/student/query.php on line 99
+[28-Mar-2016 10:55:22 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home2/racer161/public_html/coho/student/query.php on line 99
+[28-Mar-2016 10:55:52 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home2/racer161/public_html/coho/student/query.php on line 99
+[28-Mar-2016 10:55:54 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home2/racer161/public_html/coho/student/query.php on line 99
+[28-Mar-2016 10:56:30 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home2/racer161/public_html/coho/student/query.php on line 99
+[30-Mar-2016 09:41:37 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home2/racer161/public_html/coho/student/index.php on line 42
+[03-Apr-2016 04:22:30 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home2/racer161/public_html/coho/student/index.php on line 42
+[03-Apr-2016 13:58:26 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home2/racer161/public_html/coho/student/index.php on line 42
+[03-Apr-2016 13:58:32 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home2/racer161/public_html/coho/student/query.php on line 122
+[03-Apr-2016 14:00:21 America/Chicago] PHP Fatal error:  Cannot redeclare get_class() in /home2/racer161/public_html/coho/student/query.php on line 122
+[03-Apr-2016 14:00:58 America/Chicago] PHP Fatal error:  Cannot redeclare get_class() in /home2/racer161/public_html/coho/student/query.php on line 122
+[03-Apr-2016 14:01:00 America/Chicago] PHP Fatal error:  Cannot redeclare get_class() in /home2/racer161/public_html/coho/student/query.php on line 122
+[03-Apr-2016 14:03:40 America/Chicago] PHP Fatal error:  Call to a member function query() on a non-object in /home2/racer161/public_html/coho/student/query.php on line 117
+[03-Apr-2016 14:04:19 America/Chicago] PHP Fatal error:  Call to a member function query() on a non-object in /home2/racer161/public_html/coho/student/query.php on line 117
+[03-Apr-2016 14:19:03 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home2/racer161/public_html/coho/student/index.php on line 42
+[03-Apr-2016 14:34:02 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home2/racer161/public_html/coho/student/query.php on line 113

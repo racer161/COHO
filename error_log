@@ -1,1 +1,22 @@
 [06-Mar-2016 00:04:24 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home2/racer161/public_html/coho/login.php on line 16
+[02-Apr-2016 19:21:28 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 19:24:11 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 19:24:57 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 19:25:03 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 19:25:14 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 19:25:33 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 21:22:04 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 21:59:15 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 21:59:39 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 22:01:18 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 22:09:52 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 22:10:14 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 22:10:47 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 22:11:25 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 22:11:29 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 22:17:29 America/Chicago] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE) in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 22:17:42 America/Chicago] PHP Parse error:  syntax error, unexpected '"' in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 22:18:01 America/Chicago] PHP Parse error:  syntax error, unexpected '"' in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 22:18:15 America/Chicago] PHP Parse error:  syntax error, unexpected '"' in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 22:18:22 America/Chicago] PHP Parse error:  syntax error, unexpected '"' in /home2/racer161/public_html/coho/update.php on line 20
+[02-Apr-2016 23:39:44 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home2/racer161/public_html/coho/update.php on line 42

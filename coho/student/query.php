@@ -8,7 +8,6 @@ $sid = $_GET["sid"];
 $temail = $_GET["temail"];
 $pass = $_GET["pass"];
 
-$dday = $_GET["dday"];
 
 $gid = $_GET["gid"];
 $subid = $_GET["subid"];
@@ -69,10 +68,10 @@ if (isset($gid) && isset($subid)){
                             
     
                             if ($result->num_rows > 0) {
-                                echo '"students" : [';
+                                echo '[';
                                 // output data of each row
                                 while($row = $result->fetch_assoc()) {
-                                       echo '' . $row["Grade"] . '",';
+                                       echo $row["Grade"] . ',';
 
 
                                     //echo $row["Name"]. "/" . $row["firstname"]. " " . $row["lastname"]. "<br>";
@@ -85,70 +84,28 @@ if (isset($gid) && isset($subid)){
 
 
 
-if (isset($lid) && isset($dday)){
-                            $sql = 'SELECT * FROM Students WHERE LID = "' . $lid . '"';
+if (isset($lid)){ 
+                            $sql = 'SELECT * FROM Students WHERE LID = ' . $lid;
                             $result = $conn->query($sql);
     
-                            $cnt = 0;
+                            
+    
                             if ($result->num_rows > 0) {
-                                echo '[';
+                                echo ' "students" : [';
                                 // output data of each row
                                 while($row = $result->fetch_assoc()) {
-                                    echo '{"fName" : "' . $row["fName"] . '", "lName" : "' . $row["lName"] . '" , "sid" : "' . $row["SID"] . '", "class" : "' . get_cls($row["SID"]) . '"}';
-                                    if($cnt <= count($result)){
-                                        echo ',';
-                                    }
-                                    $cnt++;
- 
-
-                                    //echo $row["Name"]. "/" . $row["firstname"]. " " . $row["lastname"]. "<br>";
-                                    }
-                                    echo ']';
-                                    } else {
-                                        echo "no data!";
-                                    }
-                            
-    }
-
-if (isset($lid){
-                            $sql = 'SELECT * FROM Students WHERE LID = "' . $lid . '"';
-                            $result = $conn->query($sql);
-    
-                            $cnt = 0;
-                            if ($result->num_rows > 0) {
-                                echo '[';
-                                // output data of each row
-                                while($row = $result->fetch_assoc()) {
-                                    echo '{"fName" : "' . $row["fName"] . '", "lName" : "' . $row["lName"] . '" , "sid" : "' . $row["SID"] . '"}';
-                                    if($cnt <= count($result)){
-                                        echo ',';
-                                    }
-                                    $cnt++;
- 
-
-                                    //echo $row["Name"]. "/" . $row["firstname"]. " " . $row["lastname"]. "<br>";
-                                    }
-                                    echo ']';
-                                    } else {
-                                        echo "no data!";
-                                    }
-                            
-    }
-                                             
-
-function get_cls($s)
-{                            
-                            $sql = 'SELECT * FROM Attendance WHERE DATE = "' . $dday . '" AND SID = "' . $s . '"';
-                            $result = $conn->query($sql);
-    
-                            if ($result->num_rows > 0) {
-                              return "buttongreen";
                                     
+                                    echo '{"fName":"' . $row["fName"] . '", "lName":"' . $row["lName"] . '", "sid":"' . $row["SID"] . '"},';
+                                    
+
+
+                                    //echo $row["Name"]. "/" . $row["firstname"]. " " . $row["lastname"]. "<br>";
                                 }
-                            else {
-                                return "buttonred";
+                            echo ']';
+                            } else {
+                                echo "no data!";
                             }
-}
+    }
 
 if (isset($vid)){
                             $sql = 'SELECT * FROM Volunteers WHERE VID = ' . $vid;
