@@ -1,0 +1,10 @@
+[06-Mar-2016 00:29:00 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home2/racer161/public_html/coho/student/query.php on line 42
+[06-Mar-2016 00:29:17 America/Chicago] PHP Warning:  mysqli::mysqli(): (42000/1044): Access denied for user 'racer161_test'@'localhost' to database 'racer161_Test' in /home2/racer161/public_html/coho/student/query.php on line 10
+[06-Mar-2016 00:29:55 America/Chicago] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'racer161_coho'@'localhost' (using password: YES) in /home2/racer161/public_html/coho/student/query.php on line 10
+[06-Mar-2016 01:14:36 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home2/racer161/public_html/coho/student/query.php on line 68
+[06-Mar-2016 01:15:27 America/Chicago] PHP Fatal error:  Call to undefined function password_hash() in /home2/racer161/public_html/coho/student/query.php on line 60
+[06-Mar-2016 01:21:57 America/Chicago] PHP Fatal error:  Call to a member function close() on a non-object in /home2/racer161/public_html/coho/student/register.php on line 31
+[28-Mar-2016 09:48:48 America/Chicago] PHP Parse error:  syntax error, unexpected ':' in /home2/racer161/public_html/coho/student/query.php on line 86
+[28-Mar-2016 09:48:48 America/Chicago] PHP Parse error:  syntax error, unexpected ':' in /home2/racer161/public_html/coho/student/query.php on line 86
+[28-Mar-2016 09:48:50 America/Chicago] PHP Parse error:  syntax error, unexpected ':' in /home2/racer161/public_html/coho/student/query.php on line 86
+[28-Mar-2016 09:50:26 America/Chicago] PHP Parse error:  syntax error, unexpected ':' in /home2/racer161/public_html/coho/student/query.php on line 86
