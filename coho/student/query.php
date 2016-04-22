@@ -8,12 +8,19 @@ $sid = $_GET["sid"];
 $temail = $_GET["temail"];
 $pass = $_GET["pass"];
 
+$dday = $_GET["dday"];
+
+$gday = $_GET["gday"];
+
+$setday = $_GET["setday"];
 
 $gid = $_GET["gid"];
 $subid = $_GET["subid"];
 
 $lid = $_GET["lid"];
 
+$lidonly = $_GET["lidonly"];
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -41,7 +48,7 @@ if (isset($sid)){
 
                                           "Email":"' . $row["Email"] . '",
 
-                                          "Address":"' . $row["Adddress"] . '",
+                                          "Address":"' . $row["Address"] . '",
 
                                           "pn1":"' . $row["Parent1"] . '",
 
@@ -61,51 +68,92 @@ if (isset($sid)){
                             }
     }
 
-if (isset($gid) && isset($subid)){ 
-                            $sql = 'SELECT * FROM GradeBook WHERE SID = ' . $gid . ' AND Subject = ' . $subid  ;
+if (isset($gday) && isset($subid)&&isset($lid)){
+                            $sql = 'SELECT Students.SID, GradeBook.Score , Students.fName, Students.lName
+                                    FROM Students
+                                    INNER JOIN GradeBook
+                                    ON Students.SID = GradeBook.SID
+                                    WHERE Students.LID = "' . $lid . '" AND GradeBook.DATE = "'. $gday .'" AND GradeBook.Subject = "' . $subid . '"';
+
                             $result = $conn->query($sql);
     
                             
-    
+                            $cnt = 0;
                             if ($result->num_rows > 0) {
                                 echo '[';
                                 // output data of each row
-                                while($row = $result->fetch_assoc()) {
-                                       echo $row["Grade"] . ',';
+                                while($row = $result->fetch_assoc()) {
 
 
-                                    //echo $row["Name"]. "/" . $row["firstname"]. " " . $row["lastname"]. "<br>";
+                                    echo '{"fName" : "' . $row["fName"] . '", "lName" : "' . $row["lName"] . '" , "sid" : "' . $row["SID"] . '", "score" : "' . $row["Score"] . '"}';
+
+                                    if($cnt <= count($result) ){
+                                        echo ',';
+                                    }
+
+                                    $cnt++;
                                 }
-                            echo '0]';
+                            echo ']';
                             } else {
                                 echo "no data!";
                             }
+
     }
 
 
-
-if (isset($lid)){ 
-                            $sql = 'SELECT * FROM Students WHERE LID = ' . $lid;
-                            $result = $conn->query($sql);
+//if location is set and date im looking for is set then return Student info for students at that LID on that day
+if (isset($lid) && isset($dday)){
     
-                            
-    
-                            if ($result->num_rows > 0) {
-                                echo ' "students" : [';
-                                // output data of each row
-                                while($row = $result->fetch_assoc()) {
+                            $sql = 'SELECT Students.SID, Attendance.isPresent , Students.fName, Students.lName
+                                    FROM Students
+                                    INNER JOIN Attendance
+                                    ON Students.SID = Attendance.SID
+                                    WHERE Students.LID = "' . $lid . '" AND Attendance.DATE = "'. $dday .'"';
                                     
-                                    echo '{"fName":"' . $row["fName"] . '", "lName":"' . $row["lName"] . '", "sid":"' . $row["SID"] . '"},';
+                                    $result = $conn->query($sql);
+
+                                    $cnt = 0;
+                                    if ($result->num_rows > 0) {
+                                    echo '[';
+
+                                    // output data of each row
+
+                                    while($row = $result->fetch_assoc()) {
+
+                                    echo '{"fName" : "' . $row["fName"] . '", "lName" : "' . $row["lName"] . '" , "sid" : "' . $row["SID"] . '", "class" : "' . get_cls($row["isPresent"]) . '"}';
+
+                                    if($cnt <= count($result) ){
+                                        echo ',';
+                                    }
+
+                                    $cnt++;
+
+
                                     
-
-
-                                    //echo $row["Name"]. "/" . $row["firstname"]. " " . $row["lastname"]. "<br>";
+                                    }
+                                    echo ']';
+                                    } else {
+                                        echo "no data!";
+                                    }
+
+    }
+
+
+
+
+
+
+function get_cls($s)
+{
+
+                            if ($s > 0) {
+                              return "buttongreen";
+
                                 }
-                            echo ']';
-                            } else {
-                                echo "no data!";
+                            else {
+                                return "buttonred";
                             }
-    }
+}
 
 if (isset($vid)){
                             $sql = 'SELECT * FROM Volunteers WHERE VID = ' . $vid;
@@ -137,13 +185,19 @@ if (isset($vid)){
     }
 
 if (isset($temail) && isset($pass)){
+
                             $sql = 'SELECT * FROM Teacher WHERE Email = "' . $temail. '"';
                             $result = $conn->query($sql);
                             if ($result->num_rows > 0) {
                                 // output data of each row
                                 while($row = $result->fetch_assoc()) {
                                       if (password_verify($pass, $row["Password"])){
+                                          session_start();
+                                          $_SESSION["LID"] = $row["LID"];
+                                          $_SESSION["user"] = $temail;
+                                          $_SESSION["Full_Name"] = $row["Name"];
                                           echo "verified";
+
                                       }else{
                                           echo "error!";
                                       }
@@ -156,6 +210,34 @@ if (isset($temail) && isset($pass)){
                             }
     }
 
+if (isset($lidonly)){
+                            $sql = 'SELECT * FROM Students WHERE LID = "' . $lidonly . '"';
+                            $result = $conn->query($sql);
+
+                            $cnt = 0;
+                            if ($result->num_rows > 0) {
+                                echo '[';
+
+                                // output data of each row
+                                while($row = $result->fetch_assoc()) {
+
+                                    echo '{"fName" : "' . $row["fName"] . '", "lName" : "' . $row["lName"] . '" , "sid" : "' . $row["SID"] . '" }';
+
+
+                                    if($cnt <= count($result) ){
+                                        echo ',';
+                                    }
+
+                                    $cnt++;
+
+                                    }
+                                echo ']';
+                                    } else {
+                                        echo "no data!";
+                                    }
+
+}
+
 
 $conn->close();
 ?>

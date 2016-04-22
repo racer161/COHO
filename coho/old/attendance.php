@@ -1,22 +1,56 @@
 <html>
+
 <head>
-<link rel="stylesheet" type="text/css" href="mystyle.css">  
-<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <title>City of Hope</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
 </head>
-
-<div class="panel-att">
-        <ul>
-          <li><input class="date-in" type="date" name="day"></li>
-          <li><p id = "scoreLoad">Edit Test Scores</p></li>
-        </ul>
-    </div>
-
-
-
-
-
-
-
-
-
+
+<center>
+<div class="options">
+    <h2 class = "l1 white-text">
+            Attendance
+    </h2>
+    <h2 class = "l2">
+            <a href="attendanceView.php">
+
+            View
+
+            </a>
+    </h2>
+
+    <h2 class = "l3">
+            <a href="attendanceUpdate.php">
+
+            Update
+
+            </a>
+    </h2>
+
+    <h2 class = "logout">
+
+            Date <input type="date" name="bday">
+
+    </h2>
+
+    <h2 class = "logout">
+
+            <a href="index.php">
+
+            Logout
+
+            </a>
+
+    </h2>
+
+</div>
+
+</center>
+
+
+
+
+
+
+
 </html>
