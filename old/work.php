@@ -8,16 +8,16 @@
 <body>
     <div class="panel">
         <ul>
-          <li><p id = "attLoad">Edit Attendance</p></li>
+          <li ><a href="attendance.php"><p id = "attLoad">Edit Attendance</p></a></li>
           <li><p id = "scoreLoad">Edit Test Scores</p></li>
-          <li><p id = "stuLoad">Student List</p></li>
+          <li><p id = "stuLoad">Student Data</p></li>
           <li><p id = "stuLoad">Data View</p></li>
         </ul>
     </div>
     
     <div class="slide"> 
         <div class="pull-me">
-            <img src="images/menu-alt-512.png">
+            <img src="images/menu-alt-512.png"> 
         </div> 
     </div>
     <div id = "page">

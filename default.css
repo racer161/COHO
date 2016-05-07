@@ -443,6 +443,10 @@
 		padding: 8em 0em;
 		background: #FFF;
 	}
+
+    #wrapper3 .column h3{
+        font-weight: 500;
+    }
 	
 	#wrapper4
 	{
@@ -490,6 +494,8 @@
 
 	#content
 	{
+        width:100%;
+        margin-top: 10px;
 	}
 
 /*********************************************************************************/
@@ -587,6 +593,7 @@
 		text-transform: uppercase;
 		font-size: 1em;
 		color: rgba(0,0,0,0.6);
+        font-weight: bold;
 	}
 
 	#portfolio .title
@@ -608,5 +615,88 @@
 	{
 		float:left;
 		margin-right: 24px;
+        text-align: center;
 	}
+
+
+.attend{
+    width: 100%;
+    height: 10%;
+    background-color: #fff;
+    
+    
+}
+.attend #neg{
+    height: 100%; 
+    width: 50%;
+    background-color: red;
+    
+}
+
+.attend #pos{
+    height: 100%; 
+    width: 50%;
+    background-color: green;
+}
+
+#navbar {
+    font-size: 16px;
+}
+#navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+}
+
+#navbar li{
+    float: right;
+    width: auto;
+    height: inherit;
+    border-style: none;
+    background-color: lightgrey;
+}
+#navbar li a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#navbar li a:hover{
+    background-color: grey;
+}
+
+.navbar-brand{
+    font-family: 'Fredricka the Great', cursive;
+    color: #dab844;
+    text-align: center;
+}
+
+li.active > a{
+    background-color: #dab844 !important;
+}
+
+.navbar-brand:hover{
+    color: #dab844;
+}
+
+.navbar-collapse{
+    padding-right: 0px;
+}
+.container-fluid{
+    margin: 0px;
+    padding: 0px !important;
+}
+
+.icon-bar{
+    background-color: grey;
+}
+.navbar-toggle {
+    border: 1px;
+    border-style: solid;
+    border-color: grey;
+    color: white;
+    background-color: lightgrey;
+}
 	
